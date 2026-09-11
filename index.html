@@ -566,11 +566,13 @@
     .plans::before {
       content: '';
       position: absolute;
-      top: -40%;
-      right: -10%;
-      width: 60%;
-      height: 90%;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.22) 0%, transparent 65%);
+      top: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85%;
+      height: 110%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.14) 0%, transparent 70%);
+      pointer-events: none;
     }
     .plans .section-title { color: #fff; }
     .plans .section-sub { color: #8B949E; }
@@ -672,19 +674,52 @@
     .plan .btn + .btn, .plan .btn { margin-top: 1.6rem; }
 
     /* ── Plan showcase (assinatura no app) ─────────── */
-    .plan-showcase { margin-top: 3.2rem; position: relative; z-index: 1; }
-    .plan-showcase h3 { text-align: center; color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 0.35rem; }
-    .plan-showcase p { text-align: center; color: #8B949E; font-size: 0.9rem; margin: 0 0 1.6rem; }
-    .plan-phones { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    .plan-showcase { margin-top: 3rem; position: relative; z-index: 1; }
+    .plan-phones { display: flex; gap: 2.75rem; justify-content: center; flex-wrap: wrap; }
     .plan-phone { display: flex; flex-direction: column; align-items: center; }
-    .plan-phone .phone { width: 230px; padding: 9px; border-radius: 34px; }
-    .plan-phone .screen { border-radius: 26px; }
-    .plan-phone .phone-notch { width: 60px; height: 15px; top: 7px; border-radius: 12px; }
-    .plan-phone figcaption { margin-top: 0.85rem; color: #C9D1D9; font-size: 0.88rem; font-weight: 600; text-align: center; }
-    .plan-phone figcaption span { color: var(--gold); margin-right: 0.3rem; font-weight: 800; }
+    .plan-phone .phone {
+      width: 300px;
+      padding: 11px;
+      border-radius: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.03);
+    }
+    .plan-phone .screen { border-radius: 32px; }
+    .plan-phone .phone-notch { width: 70px; height: 17px; top: 9px; border-radius: 14px; }
+    .plan-phone figcaption {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      color: #E6EDF3;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.1px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.5rem 1rem 0.5rem 0.5rem;
+      border-radius: 999px;
+    }
+    .plan-phone figcaption span {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563EB, #1D4ED8);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.45);
+    }
+    @media (max-width: 720px) {
+      .plan-phones { gap: 2rem; }
+    }
     @media (max-width: 620px) {
-      .plan-phone .phone { width: 178px; }
-      .plan-phone figcaption { font-size: 0.8rem; }
+      .plan-phone .phone { width: 220px; }
+      .plan-phone figcaption { font-size: 0.88rem; gap: 0.45rem; }
+      .plan-phone figcaption span { width: 24px; height: 24px; font-size: 0.78rem; }
     }
 
     /* ── FAQ ───────────────────────────────────────── */
@@ -1091,21 +1126,21 @@
   <section class="plans section" id="planos">
     <div class="container">
       <center><span class="eyebrow">Assinaturas</span></center>
-      <h2 class="section-title">Como funciona a assinatura no app</h2>
-      <p class="section-sub">Escolha o plano, envie o pagamento e aproveite os benefícios todo mês. Confira o passo a passo:</p>
+      <h2 class="section-title">Como funciona a assinatura</h2>
+      <p class="section-sub">Escolha, confirme e aproveite. Tudo pelo aplicativo.</p>
       <div class="plan-showcase">
         <div class="plan-phones">
           <figure class="plan-phone">
             <div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/assinatura-1.jpg" alt="Escolha do plano de assinatura no BarberPro" loading="lazy"></div></div>
-            <figcaption><span>1.</span> Escolha o plano da barbearia</figcaption>
+            <figcaption><span>1</span> Escolha o plano</figcaption>
           </figure>
           <figure class="plan-phone">
             <div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/assinatura-2.jpg" alt="Pagamento da assinatura no BarberPro" loading="lazy"></div></div>
-            <figcaption><span>2.</span> Confirme o pagamento</figcaption>
+            <figcaption><span>2</span> Confirme o pagamento</figcaption>
           </figure>
           <figure class="plan-phone">
             <div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/assinatura-3.jpg" alt="Assinatura ativa no BarberPro" loading="lazy"></div></div>
-            <figcaption><span>3.</span> Assinatura ativa</figcaption>
+            <figcaption><span>3</span> Assinatura ativa</figcaption>
           </figure>
         </div>
       </div>
