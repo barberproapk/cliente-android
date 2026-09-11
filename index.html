@@ -357,6 +357,68 @@
     .feature h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.45rem; letter-spacing: -0.3px; }
     .feature p { color: var(--text-secondary); font-size: 0.93rem; }
 
+    /* ── Feature details (print + text) ──────────── */
+    .feature-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      padding: 2.25rem 0;
+      border-bottom: 1px solid var(--divider);
+    }
+    .feature-detail:last-child { border-bottom: 0; }
+    .feature-detail.reverse .fd-phone { order: 2; }
+    .feature-detail.reverse .fd-text { order: 1; }
+    .fd-text h3 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+      line-height: 1.25;
+      letter-spacing: -0.3px;
+    }
+    .fd-text p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .fd-text ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .fd-text ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+    .fd-text ul li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin-top: 0.15rem;
+      flex: 0 0 auto;
+    }
+    .feature-detail .fd-phone {
+      width: 250px;
+      margin: 0 auto;
+    }
+    .feature-detail .fd-phone .phone { width: 100%; }
+
+    @media (max-width: 900px) {
+      .feature-detail { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+      .feature-detail .fd-phone { order: -1 !important; width: 200px; }
+      .feature-detail.reverse .fd-text { order: 0; }
+      .fd-text ul { align-items: center; }
+    }
+    @media (max-width: 620px) {
+      .feature-detail .fd-phone { width: 180px; }
+    }
+
     /* ── How it works ──────────────────────────────── */
     .how { background: var(--surface); border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
     .steps {
@@ -741,6 +803,96 @@
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
           <h3>Perfil completo</h3>
           <p>Gerencie seus dados, histórico de agendamentos (próximos e concluídos) e preferências em um só lugar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature details -->
+  <section class="section" id="recursos-detalhe">
+    <div class="container">
+      <center><span class="eyebrow">Recurso por recurso</span></center>
+      <h2 class="section-title">Veja como funciona na prática</h2>
+      <p class="section-sub">Cada funcionalidade do BarberPro explicada com a tela real do aplicativo.</p>
+
+      <div class="feature-detail">
+        <div class="fd-phone"><div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/screen-1.jpg" alt="Tela inicial do BarberPro" loading="lazy"></div></div></div>
+        <div class="fd-text">
+          <h3>Encontre barbearias perto de você</h3>
+          <p>Ao abrir o app, você vê as barbearias próximas com status em tempo real, avaliações e distância. Promoções aparecem em destaque para você agendar em um toque.</p>
+          <ul>
+            <li>Localização automática da sua região</li>
+            <li>Indicação de "Aberto agora" em tempo real</li>
+            <li>Promoções em destaque direto na home</li>
+            <li>Botão "Agendar" em cada barbearia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-detail reverse">
+        <div class="fd-phone"><div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/screen-7.jpg" alt="Lista de serviços do BarberPro" loading="lazy"></div></div></div>
+        <div class="fd-text">
+          <h3>Escolha o serviço com preço e duração</h3>
+          <p>Navegue pela lista de serviços da barbearia e veja na hora o preço e o tempo de cada um. Do corte simples até luzes e limpeza de pele, tudo transparente.</p>
+          <ul>
+            <li>Preço e duração visíveis antes de agendar</li>
+            <li>Serviços com avisos (ex.: só para clientes novos)</li>
+            <li>Catálogo completo de cada barbearia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-detail">
+        <div class="fd-phone"><div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/screen-2.jpg" alt="Escolha de horário no BarberPro" loading="lazy"></div></div></div>
+        <div class="fd-text">
+          <h3>Escolha o barbeiro e o melhor horário</h3>
+          <p>Selecione o profissional da sua preferência e veja a agenda em tempo real. Um calendário mostra os dias disponíveis e os horários livres listados por período.</p>
+          <ul>
+            <li>Escolha do profissional antes do horário</li>
+            <li>Calendário com dias disponíveis</li>
+            <li>Horários livres organizados por período</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-detail reverse">
+        <div class="fd-phone"><div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/screen-3.jpg" alt="Pagamento no BarberPro" loading="lazy"></div></div></div>
+        <div class="fd-text">
+          <h3>Pague online com PIX ou cartão</h3>
+          <p>Finalize o agendamento direto no app: pague com PIX (QR Code) ou cartão de crédito, com processamento seguro pelo Asaas. Se tiver saldo na barbearia, use na hora.</p>
+          <ul>
+            <li>PIX com QR Code gerado na hora</li>
+            <li>Cartão de crédito com dados protegidos</li>
+            <li>Uso do saldo disponível na barbearia</li>
+            <li>Pagamento processado com segurança pelo Asaas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-detail">
+        <div class="fd-phone"><div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/screen-5.jpg" alt="Detalhes da barbearia no BarberPro" loading="lazy"></div></div></div>
+        <div class="fd-text">
+          <h3>Conheça a barbearia antes de ir</h3>
+          <p>Veja o endereço, os barbeiros, os horários de funcionamento e os serviços de cada barbearia. Assim você chega sabendo exatamente o que esperar.</p>
+          <ul>
+            <li>Endereço, contato e redes sociais</li>
+            <li>Barbeiros disponíveis e horários de funcionamento</li>
+            <li>Tudo com um único botão "Agendar Serviço"</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-detail reverse">
+        <div class="fd-phone"><div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/screen-8.jpg" alt="Perfil do usuário no BarberPro" loading="lazy"></div></div></div>
+        <div class="fd-text">
+          <h3>Acompanhe tudo no seu perfil</h3>
+          <p>Seu histórico de cortes, suas assinaturas das barbearias, seu saldo e suas avaliações ficam centralizados. Gerencie seus dados e preferências em um só lugar.</p>
+          <ul>
+            <li>Histórico de cortes e agendamentos anteriores</li>
+            <li>Assinaturas dos planos de barbearias</li>
+            <li>Saldo disponível para usar nas barbearias</li>
+            <li>Dados pessoais e tema claro ou escuro</li>
+          </ul>
         </div>
       </div>
     </div>
