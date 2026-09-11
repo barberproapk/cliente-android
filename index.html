@@ -410,9 +410,9 @@
     .plans .eyebrow { border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.1); color: var(--gold); }
     .plan-cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
-      max-width: 1000px;
+      max-width: 820px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -693,8 +693,8 @@
         </div>
         <div class="feature gold">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
-          <h3>Créditos e Clube VIP</h3>
-          <p>Acumule créditos, aproveite o Clube VIP GOLD e desbloqueie benefícios e vantagens exclusivas na sua barbearia.</p>
+          <h3>Planos mensais</h3>
+          <p>Cada barbearia oferece seus planos: pague um valor mensal e realize serviços X vezes por mês ou de forma ilimitada.</p>
         </div>
         <div class="feature">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></div>
@@ -769,45 +769,33 @@
   <section class="plans section" id="planos">
     <div class="container">
       <center><span class="eyebrow">Planos</span></center>
-      <h2 class="section-title">Escolha o plano ideal para você</h2>
-      <p class="section-sub">Comece grátis no plano Clássico. Quer ainda mais vantagens? Assine o VIP ou Gold pelo app.</p>
+      <h2 class="section-title">Assine um plano da sua barbearia</h2>
+      <p class="section-sub">Escolha um plano mensal oferecido pela barbearia, pague um valor fixo e realize seus serviços X vezes por mês ou de forma ilimitada.</p>
       <div class="plan-cards">
         <div class="plan">
-          <h3>Clássico</h3>
-          <div class="price"><b>Grátis</b> <span>/ para sempre</span></div>
+          <h3>Plano com X serviços</h3>
+          <div class="price"><b>Mensal</b> <span>valor definido pela barbearia</span></div>
           <ul>
-            <li>2 cortes por mês</li>
-            <li>Agendamento prioritário</li>
-            <li>10% off em produtos</li>
-            <li>Busca de barbearias e horários reais</li>
-            <li>Pagamento PIX e cartão</li>
+            <li>Assine um plano da sua barbearia favorita</li>
+            <li>Pague um valor fixo todo mês</li>
+            <li>Realize um número de serviços por mês</li>
+            <li>Ex.: 2 cortes inclusos mensalmente</li>
+            <li>Renovação automática, cancele quando quiser</li>
           </ul>
-          <a class="btn btn-light" href="#baixar">Começar grátis</a>
+          <a class="btn btn-light" href="#baixar">Assinar um plano</a>
         </div>
         <div class="plan popular">
           <span class="tag">Mais vantajoso</span>
-          <h3>VIP</h3>
-          <div class="price"><b>Assinatura</b> <span>mensal</span></div>
+          <h3>Plano Ilimitado</h3>
+          <div class="price"><b>Mensal</b> <span>valor definido pela barbearia</span></div>
           <ul>
-            <li>Cortes ilimitados</li>
-            <li>Barba e sobrancelha inclusas</li>
-            <li>Bebida cortesia (cerveja/refri)</li>
-            <li>20% off em produtos</li>
-            <li>Agendamento prioritário</li>
+            <li>Assine um plano da sua barbearia favorita</li>
+            <li>Pague um valor fixo todo mês</li>
+            <li>Realize serviços de forma ilimitada</li>
+            <li>Ex.: cortes ilimitados com extras inclusos</li>
+            <li>Renovação automática, cancele quando quiser</li>
           </ul>
-          <a class="btn btn-gold" href="#baixar">Assinar VIP</a>
-        </div>
-        <div class="plan">
-          <h3>Gold</h3>
-          <div class="price"><b>Premium</b> <span>mensal</span></div>
-          <ul>
-            <li>Tudo do VIP (cortes + barba + sobrancelha)</li>
-            <li>Massagem relaxante</li>
-            <li>Produtos premium mensais</li>
-            <li>30% off em todos serviços</li>
-            <li>Bebida cortesia em cada visita</li>
-          </ul>
-          <a class="btn btn-light" href="#baixar">Quero o Gold</a>
+          <a class="btn btn-gold" href="#baixar">Assinar plano ilimitado</a>
         </div>
       </div>
     </div>
@@ -822,7 +810,7 @@
       <div class="faq-inner">
         <details class="faq-item">
           <summary>O aplicativo é gratuito?</summary>
-          <div class="faq-body">Sim! O baixar não custa nada e você pode agendar serviços sem pagar mensalidade. O Clube VIP GOLD é opcional e traz benefícios e descontos exclusivos.</div>
+          <div class="faq-body">Sim! O baixar é grátis e você pode agendar serviços avulsos sem pagar mensalidade. Os planos mensais são opcionais: cada barbearia oferece seus próprios planos e você escolhe se quer assinar.</div>
         </details>
         <details class="faq-item">
           <summary>Como funciona o pagamento?</summary>
@@ -841,8 +829,12 @@
           <div class="faq-body">Você pode remarcar ou cancelar seu agendamento pelo próprio aplicativo, na área de agendamentos. Recomendamos avisar com antecedência.</div>
         </details>
         <details class="faq-item">
-          <summary>O que é o Clube VIP GOLD?</summary>
-          <div class="faq-body">É o plano de assinatura do BarberPro com cortes ilimitados, barba e sobrancelha inclusas, bebida cortesia, descontos em produtos e agendamento prioritário. Você assina e gerencia tudo pelo app.</div>
+          <summary>Como funcionam os planos mensais das barbearias?</summary>
+          <div class="faq-body">Cada barbearia oferece seus próprios planos. Você escolhe um plano, paga a mensalidade definida pelo barbeiro e passa a realizar serviços X vezes por mês — ou de forma ilimitada, dependendo do plano.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Posso cancelar ou trocar de plano?</summary>
+          <div class="faq-body">Sim. Você gerencia tudo pelo aplicativo e pode cancelar ou trocar de plano quando quiser.</div>
         </details>
         <details class="faq-item">
           <summary>Como excluir minha conta ou meus dados?</summary>
