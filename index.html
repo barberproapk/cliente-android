@@ -671,6 +671,22 @@
     .plan .btn { width: 100%; margin-top: auto; padding-top: 0.4rem; }
     .plan .btn + .btn, .plan .btn { margin-top: 1.6rem; }
 
+    /* ── Plan showcase (assinatura no app) ─────────── */
+    .plan-showcase { margin-top: 3.2rem; position: relative; z-index: 1; }
+    .plan-showcase h3 { text-align: center; color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 0.35rem; }
+    .plan-showcase p { text-align: center; color: #8B949E; font-size: 0.9rem; margin: 0 0 1.6rem; }
+    .plan-phones { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    .plan-phone { display: flex; flex-direction: column; align-items: center; }
+    .plan-phone .phone { width: 230px; padding: 9px; border-radius: 34px; }
+    .plan-phone .screen { border-radius: 26px; }
+    .plan-phone .phone-notch { width: 60px; height: 15px; top: 7px; border-radius: 12px; }
+    .plan-phone figcaption { margin-top: 0.85rem; color: #C9D1D9; font-size: 0.88rem; font-weight: 600; text-align: center; }
+    .plan-phone figcaption span { color: var(--gold); margin-right: 0.3rem; font-weight: 800; }
+    @media (max-width: 620px) {
+      .plan-phone .phone { width: 178px; }
+      .plan-phone figcaption { font-size: 0.8rem; }
+    }
+
     /* ── FAQ ───────────────────────────────────────── */
     .faq-item {
       background: var(--surface);
@@ -1100,6 +1116,24 @@
             <li>Cancele quando quiser</li>
           </ul>
           <a class="btn btn-gold" href="#baixar">Assinar plano ilimitado</a>
+        </div>
+      </div>
+      <div class="plan-showcase">
+        <h3>Veja como a assinatura funciona no app</h3>
+        <p>Escolha o plano, pague com PIX ou cartão e aproveite os benefícios todo mês.</p>
+        <div class="plan-phones">
+          <figure class="plan-phone">
+            <div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/assinatura-1.jpg" alt="Escolha do plano de assinatura no BarberPro" loading="lazy"></div></div>
+            <figcaption><span>1.</span> Escolha o plano da barbearia</figcaption>
+          </figure>
+          <figure class="plan-phone">
+            <div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/assinatura-2.jpg" alt="Pagamento da assinatura no BarberPro" loading="lazy"></div></div>
+            <figcaption><span>2.</span> Confirme o pagamento</figcaption>
+          </figure>
+          <figure class="plan-phone">
+            <div class="phone"><div class="screen"><div class="phone-notch"></div><img src="screens/assinatura-3.jpg" alt="Assinatura ativa no BarberPro" loading="lazy"></div></div>
+            <figcaption><span>3.</span> Assinatura ativa</figcaption>
+          </figure>
         </div>
       </div>
     </div>
