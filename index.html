@@ -410,9 +410,9 @@
     .plans .eyebrow { border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.1); color: var(--gold); }
     .plan-cards {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      max-width: 820px;
+      max-width: 1000px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -770,32 +770,44 @@
     <div class="container">
       <center><span class="eyebrow">Planos</span></center>
       <h2 class="section-title">Escolha o plano ideal para você</h2>
-      <p class="section-sub">Comece grátis e, se quiser ainda mais vantagens, conheça o Clube VIP GOLD.</p>
+      <p class="section-sub">Comece grátis no plano Clássico. Quer ainda mais vantagens? Assine o VIP ou Gold pelo app.</p>
       <div class="plan-cards">
         <div class="plan">
-          <h3>Gratuito</h3>
-          <div class="price"><b>R$ 0</b> <span>/ para sempre</span></div>
+          <h3>Clássico</h3>
+          <div class="price"><b>Grátis</b> <span>/ para sempre</span></div>
           <ul>
-            <li>Agendamento online ilimitado</li>
-            <li>Busca e localização de barbearias</li>
+            <li>2 cortes por mês</li>
+            <li>Agendamento prioritário</li>
+            <li>10% off em produtos</li>
+            <li>Busca de barbearias e horários reais</li>
             <li>Pagamento PIX e cartão</li>
-            <li>Histórico de agendamentos</li>
-            <li>Lembretes e notificações</li>
           </ul>
           <a class="btn btn-light" href="#baixar">Começar grátis</a>
         </div>
         <div class="plan popular">
           <span class="tag">Mais vantajoso</span>
-          <h3>Clube VIP GOLD</h3>
-          <div class="price"><b>Descontos</b> <span>e benefícios exclusivos</span></div>
+          <h3>VIP</h3>
+          <div class="price"><b>Assinatura</b> <span>mensal</span></div>
           <ul>
-            <li>Descontos especiais em serviços</li>
-            <li>Créditos e benefícios exclusivos</li>
-            <li>Prioridade em horários</li>
-            <li>Condições especiais de assinatura</li>
-            <li>Vantagens exclusivas na barbearia</li>
+            <li>Cortes ilimitados</li>
+            <li>Barba e sobrancelha inclusas</li>
+            <li>Bebida cortesia (cerveja/refri)</li>
+            <li>20% off em produtos</li>
+            <li>Agendamento prioritário</li>
           </ul>
           <a class="btn btn-gold" href="#baixar">Assinar VIP</a>
+        </div>
+        <div class="plan">
+          <h3>Gold</h3>
+          <div class="price"><b>Premium</b> <span>mensal</span></div>
+          <ul>
+            <li>Tudo do VIP (cortes + barba + sobrancelha)</li>
+            <li>Massagem relaxante</li>
+            <li>Produtos premium mensais</li>
+            <li>30% off em todos serviços</li>
+            <li>Bebida cortesia em cada visita</li>
+          </ul>
+          <a class="btn btn-light" href="#baixar">Quero o Gold</a>
         </div>
       </div>
     </div>
@@ -830,7 +842,7 @@
         </details>
         <details class="faq-item">
           <summary>O que é o Clube VIP GOLD?</summary>
-          <div class="faq-body">É o plano de benefícios do BarberPro com descontos em serviços, créditos e vantagens exclusivas. Você pode assinar pelo app e gerenciar tudo por lá.</div>
+          <div class="faq-body">É o plano de assinatura do BarberPro com cortes ilimitados, barba e sobrancelha inclusas, bebida cortesia, descontos em produtos e agendamento prioritário. Você assina e gerencia tudo pelo app.</div>
         </details>
         <details class="faq-item">
           <summary>Como excluir minha conta ou meus dados?</summary>
