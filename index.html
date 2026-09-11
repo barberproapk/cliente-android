@@ -610,9 +610,20 @@
       box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
     }
     .plan h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.3rem; }
-    .plan .price { margin: 0.9rem 0 1.2rem; }
-    .plan .price b { font-size: 2rem; font-weight: 900; letter-spacing: -0.5px; }
-    .plan .price span { color: #8B949E; font-size: 0.9rem; }
+    .plan .limit {
+      display: inline-block;
+      margin: 1.1rem 0 0.4rem;
+      background: rgba(37, 99, 235, 0.14);
+      border: 1px solid rgba(37, 99, 235, 0.35);
+      color: #8AB4FF;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+    }
+    .plan.popular .limit { background: rgba(245, 158, 11, 0.14); border-color: rgba(245, 158, 11, 0.35); color: var(--gold); }
+    .plan .note { color: #8B949E; font-size: 0.92rem; margin: 0.5rem 0 1.1rem; }
     .plan ul { list-style: none; }
     .plan ul li {
       padding: 0.45rem 0 0.45rem 1.7rem;
@@ -1051,30 +1062,26 @@
     <div class="container">
       <center><span class="eyebrow">Planos</span></center>
       <h2 class="section-title">Assine um plano da sua barbearia</h2>
-      <p class="section-sub">Escolha um plano mensal oferecido pela barbearia, pague um valor fixo e realize seus serviços X vezes por mês ou de forma ilimitada.</p>
+      <p class="section-sub">Cada barbearia define seus preços. Pague todo mês e agende seus serviços.</p>
       <div class="plan-cards">
         <div class="plan">
           <h3>Plano com X serviços</h3>
-          <div class="price"><b>Mensal</b> <span>valor definido pela barbearia</span></div>
+          <div class="limit">X serviços / mês</div>
+          <p class="note">Valor definido pela barbearia</p>
           <ul>
-            <li>Assine um plano da sua barbearia favorita</li>
-            <li>Pague um valor fixo todo mês</li>
-            <li>Realize um número de serviços por mês</li>
-            <li>Ex.: 2 cortes inclusos mensalmente</li>
-            <li>Renovação automática, cancele quando quiser</li>
+            <li>Renovação mensal automática</li>
+            <li>Cancele quando quiser</li>
           </ul>
-          <a class="btn btn-light" href="#baixar">Assinar um plano</a>
+          <a class="btn btn-light" href="#baixar">Assinar plano</a>
         </div>
         <div class="plan popular">
           <span class="tag">Mais vantajoso</span>
           <h3>Plano Ilimitado</h3>
-          <div class="price"><b>Mensal</b> <span>valor definido pela barbearia</span></div>
+          <div class="limit">Serviços ilimitados</div>
+          <p class="note">Valor definido pela barbearia</p>
           <ul>
-            <li>Assine um plano da sua barbearia favorita</li>
-            <li>Pague um valor fixo todo mês</li>
-            <li>Realize serviços de forma ilimitada</li>
-            <li>Ex.: cortes ilimitados com extras inclusos</li>
-            <li>Renovação automática, cancele quando quiser</li>
+            <li>Renovação mensal automática</li>
+            <li>Cancele quando quiser</li>
           </ul>
           <a class="btn btn-gold" href="#baixar">Assinar plano ilimitado</a>
         </div>
